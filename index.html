@@ -248,6 +248,63 @@
     </div>
   </section>
 
+  <!-- Evaluation SECTION -->
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 waves">
+        <!-- <img src="static/images/waves_icon.jpg" style="width:1em;vertical-align: middle" alt="Logo" /> -->
+        <span class="waves" style="vertical-align: middle">Evaluation of Watermark Robustness</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/problem.gif" alt="evaluation workflow" width="90%" />
+
+                <p> <b>What is watermark robustness?</b> An AI company provides two services: (1) generate watermarked images,
+                  i.e., embed invisible messages, either through a post-processing method or an in-processing method, and (2) detect these messages when shown any of 
+                  their watermarked images. There is an attack stage between the watermarking and detection stages. The watermarked images may experience natural distortions 
+                  (e.g., compression, re-scaling) or manipulated by malicious users attempting to remove the watermarks. A robust watermarking method should still be able 
+                  to detect the original message after an attack. WAVES can evaluate the robustness of any watermarks.
+                </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/workflow_a.gif" alt="evaluation workflow" width="90%" />
+
+                <p> <b>Evaluation of a single attack on a watermarking method.</b> We first attack watermarked images
+                  over
+                  a variety of strengths (also labeled 'stg'). Then, we evaluate the detection performance (TPR@0.1%FPR)
+                  and a collection of image quality metrics such as PSNR, and plot a set of performance vs. quality
+                  plots. By normalizing and aggregating these quality metrics, we derive a consolidated 2D plot that
+                  represents the overall performance vs. quality for the evaluation.
+                </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/workflow_b.gif" alt="evaluation workflow" width="90%" />
+                <p> <b>Benchmarking watermarks and attacks.</b> For each watermarking method, we plot all attacks on a
+                  unified
+                  performance vs. quality 2D plot to facilitate a detailed comparison. Based on this, we provide two
+                  additional analytical perspectives. We compare watermarks' robustness through the averaged performance
+                  under different attacks. We evaluate attacks' potency by ranking the quality at a specific performance
+                  threshold.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--End Evaluation SECTION -->
 
   <!-- Benchmark Watermark SECTION -->
   <section class="hero is-light is-small">
@@ -266,7 +323,7 @@
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/bench_watermarks_detect.jpg" alt="geometric reasoning" width="84%" />
+                <img src="static/images/bench_watermarks_detect.jpg" alt="geometric reasoning" width="100%" />
 
                 <p> <b>Watermark detection performance</b> (i.e., TPR@0.1%FPR) of Stable Signature,
                   StegaStamp, and Tree-Ring watermarks after attacks via WAVES. We compute the Average TPR@0.1%FPR
@@ -282,7 +339,7 @@
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/bench_watermarks_ident.jpg" alt="geometric reasoning" width="84%" />
+                <img src="static/images/bench_watermarks_ident.jpg" alt="geometric reasoning" width="100%" />
                 <p> <b>User identification performance</b> (i.e., accuracy) of Stable Signature, StegaStamp,
                   and Tree-Ring watermarks after attacks via WAVES. We simulate identification tasks with total user
                   counts of 100, 1,000, and 1000000.
@@ -1532,52 +1589,63 @@
 </script>
 <!-- End Performance vs Quality Plots SECTION -->
 
+<!-- Example SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 waves">
+      <!-- <img src="static/images/waves_icon.jpg" style="width:1em;vertical-align: middle" alt="Logo" /> -->
+      <span class="waves" style="vertical-align: middle">Visualize Attacks</span>
+    </h1>
+  </div>
+</section>
 
-<!-- Evaluation SECTION -->
-  <section class="hero is-light is-small">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-1 waves">
-        <!-- <img src="static/images/waves_icon.jpg" style="width:1em;vertical-align: middle" alt="Logo" /> -->
-        <span class="waves" style="vertical-align: middle">Evaluation Process</span>
-      </h1>
-    </div>
-  </section>
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/example_1.jpg" alt="evaluation workflow" width="80%" />
 
-  <section class="section">
-    <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
-      <div class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/workflow_a.jpg" alt="geometric reasoning" width="84%" />
-
-                <p> <b>Evaluation of a single attack on a watermarking method.</b> We first attack watermarked images
-                  over
-                  a variety of strengths (also labeled 'stg'). Then, we evaluate the detection performance (TPR@0.1%FPR)
-                  and a collection of image quality metrics such as PSNR, and plot a set of performance vs. quality
-                  plots. By normalizing and aggregating these quality metrics, we derive a consolidated 2D plot that
-                  represents the overall performance vs. quality for the evaluation.
-                </p>
-              </div>
+              <p> Distortions.
+              </p>
             </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/workflow_b.jpg" alt="geometric reasoning" width="84%" />
-                <p> <b>Benchmarking watermarks and attacks.</b> For each watermarking method, we plot all attacks on a
-                  unified
-                  performance vs. quality 2D plot to facilitate a detailed comparison. Based on this, we provide two
-                  additional analytical perspectives. We compare watermarks' robustness through the averaged performance
-                  under different attacks. We evaluate attacks' potency by ranking the quality at a specific performance
-                  threshold.
-                </p>
-              </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/example_2.jpg" alt="evaluation workflow" width="80%" />
+              <p> Regeneration Attacks.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/example_3.jpg" alt="evaluation workflow" width="80%" />
+              <p> Regeneration Attacks.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/example_4.jpg" alt="evaluation workflow" width="80%" />
+              <p> Adversarial Attacks.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/example_5.jpg" alt="evaluation workflow" width="80%" />
+              <p> Adversarial Attacks.
+              </p>
             </div>
           </div>
         </div>
       </div>
-  </section>
-  <!--End Evaluation SECTION -->
+    </div>
+</section>
+<!--End Evaluation SECTION -->
+
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
